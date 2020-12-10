@@ -13,5 +13,5 @@
 
 | Ingredient                                                       | Quantity           | Remark       |
 | :--------------------------------------------------------------- | :----------------: | -----------: |
-| <img height="32" style="padding:0px" src="images/mosterd-maille-dijon-original.png"> | 2 el fijne mosterd |              |
+| <img height="32" src="images/mosterd-maille-dijon-original.png"> | 2 el fijne mosterd |              |
 
