@@ -11,13 +11,7 @@
 * 2 el fijne mosterd
 * 75 g Parmigiano Reggiano-poeder
 
-| Ingredient | Quantity           | Remark       |
-| :--------- | :----------------: | -----------: |
-| ![mosterd] | 2 el fijne mosterd |              |
+| Ingredient                                                       | Quantity           | Remark       |
+| :--------------------------------------------------------------- | :----------------: | -----------: |
+| <img height="32" src="images/mosterd-maille-dijon-original.png"> | 2 el fijne mosterd |              |
 
- 
- 
-<img height="32" src="images/mosterd-maille-dijon-original.png">
-
-
-[mosterd]: images/mosterd-maille-dijon-original.png "Title Text"
