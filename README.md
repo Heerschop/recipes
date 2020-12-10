@@ -1,1 +1,3 @@
-# recipes
+# Recipes
+
+* [Zuurkoolstamppot](zuurkoolstamppot.md)
