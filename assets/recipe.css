@@ -13,41 +13,41 @@ a {
   target-new: tab;
 }
 
-#ingredients > img {
+.ingredients > img {
   transition: transform 0.2s;
   height: 32px;
   margin: auto 16px auto 16px;
 }
 
-#ingredients > img:active {
+.ingredients > img:active {
   transform: scale(10);
 }
 
-#ingredients > h2 {
+.ingredients > h2 {
   grid-column: 2 / span 2;
   margin-left: 16px;
   margin-bottom: 0;
 }
 
-#ingredients {
+.ingredients {
   display: grid;
   grid-template-columns: min-content min-content auto;
   grid-gap: 4px;
 }
 
-#ingredients > div {
+.ingredients > div {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-#ingredients > input {
+.ingredients > input {
   width: 32px;
   height: 32px;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-#ingredients > hr {
+.ingredients > hr {
   grid-column: span 3;
   width: 100%;
   border-color: #b9b9b4;
