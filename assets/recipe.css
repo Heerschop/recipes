@@ -3,14 +3,34 @@ body {
   height: 100%;
   margin: 0px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  position: fixed;
+  background: #A1887F;
 }
 
 a {
   font-weight: bold;
   text-decoration: none;
   font-size: 2em;
-  target-new: tab;
+  display: flex;
+  padding-top: 16px;
+  justify-content: center;  
+  background: #795548;
+  height: 100px;
+  color: #EFEBE9;
+}
+a:visited {
+  color: #EFEBE9;
+  text-decoration: none;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: min-content min-content auto;
+  grid-gap: 4px;
+  background: #EFEBE9;
+  margin: -42px 16px 16px 16px;
+  border-radius:8px;
+  padding: 8px 16px 16px 16px;
+  
 }
 
 .ingredients > img {
@@ -24,15 +44,8 @@ a {
 }
 
 .ingredients > h2 {
-  grid-column: 2 / span 2;
-  margin-left: 16px;
-  margin-bottom: 0;
-}
-
-.ingredients {
-  display: grid;
-  grid-template-columns: min-content min-content auto;
-  grid-gap: 4px;
+  grid-column: span 3;
+  margin: 16px auto auto auto;
 }
 
 .ingredients > div {
@@ -50,7 +63,7 @@ a {
 .ingredients > hr {
   grid-column: span 3;
   width: 100%;
-  border-color: #b9b9b4;
+  border-color: #4E342E;
   border-style: dashed;
   border-bottom-width: 1px;
 }
