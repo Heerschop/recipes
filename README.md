@@ -1,3 +1,6 @@
 # Recipes
 
-* [Zuurkoolstamppot](zuurkoolstamppot.md)
+### Basic setup
+``` bash
+npx lite-server
+```
