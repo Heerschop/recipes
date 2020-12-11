@@ -26,7 +26,7 @@ function processRecipe() {
         ingredients.insertBefore(inputElement, element);
 
         const imageElement = document.createElement("img");
-        imageElement.src = (image.startsWith('http') ? '' : '../images/') + image;
+        imageElement.src = (image.startsWith('http') ? '' : 'images/') + image;
         ingredients.insertBefore(imageElement, element);
       }
     }
