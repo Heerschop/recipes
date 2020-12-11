@@ -37,6 +37,12 @@ a:visited {
   transition: transform 0.2s;
   height: 32px;
   margin: auto 16px auto 16px;
+  background: #D7CCC8;
+  border-radius:6px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #BCAAA4;
+  padding: 4px;
 }
 
 .ingredients > img:active {
