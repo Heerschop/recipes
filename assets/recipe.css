@@ -23,17 +23,23 @@ a:visited {
 }
 
 .ingredients {
-  display: grid;
-  grid-template-columns: min-content min-content auto;
-  grid-gap: 4px;
   background: #EFEBE9;
   margin: -42px 16px 16px 16px;
   border-radius:8px;
   padding: 8px 16px 16px 16px;
-  
 }
 
-.ingredients > img {
+.ingredients > div {
+  display: flex;
+  padding:6px;
+  align-items: center;
+}
+
+.ingredients > div:hover {
+  background:#A1887F;
+}
+
+.ingredients > div > img {
   transition: transform 0.2s;
   height: 32px;
   margin: auto 16px auto 16px;
@@ -45,31 +51,27 @@ a:visited {
   padding: 4px;
 }
 
-.ingredients > img:active {
+.ingredients > div > img:active {
   transform: scale(10);
+}
+.ingredients > div > hr {
+  width: 100%;
+  border-style: solid;
+  border-color: #4E342E;
+  border-width: 1px;
+  position: absolute;
 }
 
 .ingredients > h2 {
-  grid-column: span 3;
   margin: 16px auto auto auto;
-}
-
-.ingredients > div {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.ingredients > input {
-  width: 32px;
-  height: 32px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .ingredients > hr {
-  grid-column: span 3;
   width: 100%;
   border-color: #4E342E;
   border-style: dashed;
   border-bottom-width: 1px;
+  margin: 0px;
 }
