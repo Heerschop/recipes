@@ -17,6 +17,7 @@ a {
   height: 100px;
   color: #EFEBE9;
 }
+
 a:visited {
   color: #EFEBE9;
   text-decoration: none;
@@ -24,9 +25,13 @@ a:visited {
 
 .ingredients {
   background: #EFEBE9;
-  margin: -42px 16px 16px 16px;
+  margin: 24px;
   border-radius:8px;
   padding: 8px 16px 16px 16px;
+}
+
+.recipe {
+  margin-top: -64px
 }
 
 .ingredients > div {
@@ -34,7 +39,6 @@ a:visited {
   padding:6px;
   align-items: center;
 }
-
 .ingredients > div:hover {
   background:#A1887F;
 }
@@ -74,4 +78,71 @@ a:visited {
   border-style: dashed;
   border-bottom-width: 1px;
   margin: 0px;
+}
+
+.preparation {
+  background: #EFEBE9;
+  margin: 24px;
+  border-radius:8px;
+  padding: 8px 16px 16px 16px;
+}
+
+.preparation > div {
+  display: flex;
+  padding:6px;
+  align-items: center;
+}
+.preparation > div:hover {
+  background:#A1887F;
+}
+
+.preparation > div > img {
+  transition: transform 0.2s;
+  height: 32px;
+  margin: auto 16px auto 16px;
+  background: #D7CCC8;
+  border-radius:6px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #BCAAA4;
+  padding: 4px;
+}
+
+.preparation > div > img:active {
+  transform: scale(10);
+}
+.preparation > div > hr {
+  width: 100%;
+  border-style: solid;
+  border-color: #4E342E;
+  border-width: 1px;
+  position: absolute;
+}
+
+.preparation > h2 {
+  margin: 16px auto auto auto;
+  display: flex;
+  justify-content: center;
+}
+
+.preparation > hr {
+  width: 100%;
+  border-color: #4E342E;
+  border-style: dashed;
+  border-bottom-width: 1px;
+  margin: 0px;
+}
+
+.preparation > div > div {
+  color: #EFEBE9;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: #795548;
+  width:32px;
+  height:32px;
+  border-radius:24px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  margin: auto 16px auto 16px;
 }
