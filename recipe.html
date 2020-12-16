@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title id="title">Recipe</title>
   <link rel="stylesheet" type="text/css" media="screen" href="assets/recipe.css" />
   <script src="assets/include.js"></script>
   <script src="assets/recipe.js"></script>
@@ -17,13 +17,18 @@
 </html>
 
 <script>
-  const element = document.getElementById("include-html");
+  const params = new URLSearchParams(window.location.search);
+  const recipe = params.get('id');
 
-  if (element) {
-    const params = new URLSearchParams(window.location.search);
-    const recipe = params.get('id');
+  {
+    const element = document.getElementById('include-html');
 
-    element.setAttribute('include-html', 'recipes/' + recipe + '.html');
+    if (element) element.setAttribute('include-html', 'recipes/' + recipe + '.html');
+  }
+  {
+    const element = document.getElementById('title');
+
+    if (element) element.text = recipe;
   }
 </script>
 
