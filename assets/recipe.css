@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background: #A1887F;
+  background: #a1887f;
 }
 
 a {
@@ -12,46 +12,56 @@ a {
   font-size: 2em;
   display: flex;
   padding-top: 16px;
-  justify-content: center;  
+  justify-content: center;
   background: #795548;
   height: 100px;
-  color: #EFEBE9;
+  color: #efebe9;
 }
 
 a:visited {
-  color: #EFEBE9;
+  color: #efebe9;
   text-decoration: none;
 }
 
 .ingredients {
-  background: #EFEBE9;
+  background: #efebe9;
   margin: 24px;
-  border-radius:8px;
+  border-radius: 8px;
   padding: 8px 16px 16px 16px;
+  width: 100%;
 }
 
 .recipe {
-  margin-top: -64px
+  margin-top: -64px;
+  display: flex;
+}
+
+@media only screen and (max-width: 720px) {
+  .recipe {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
 }
 
 .ingredients > div {
   display: flex;
-  padding:6px;
+  padding: 6px;
   align-items: center;
 }
 .ingredients > div:hover {
-  background:#A1887F;
+  background: #a1887f;
 }
 
 .ingredients > div > img {
   transition: transform 0.2s;
   height: 32px;
   margin: auto 16px auto 16px;
-  background: #D7CCC8;
-  border-radius:6px;
+  background: #d7ccc8;
+  border-radius: 6px;
   border-width: 2px;
   border-style: solid;
-  border-color: #BCAAA4;
+  border-color: #bcaaa4;
   padding: 4px;
 }
 
@@ -61,7 +71,7 @@ a:visited {
 .ingredients > div > hr {
   width: 100%;
   border-style: solid;
-  border-color: #4E342E;
+  border-color: #4e342e;
   border-width: 1px;
   position: absolute;
 }
@@ -74,37 +84,38 @@ a:visited {
 
 .ingredients > hr {
   width: 100%;
-  border-color: #4E342E;
+  border-color: #4e342e;
   border-style: dashed;
   border-bottom-width: 1px;
   margin: 0px;
 }
 
 .preparation {
-  background: #EFEBE9;
+  background: #efebe9;
   margin: 24px;
-  border-radius:8px;
+  border-radius: 8px;
   padding: 8px 16px 16px 16px;
+  width: 100%;
 }
 
 .preparation > div {
   display: flex;
-  padding:6px;
+  padding: 6px;
   align-items: center;
 }
 .preparation > div:hover {
-  background:#A1887F;
+  background: #a1887f;
 }
 
 .preparation > div > img {
   transition: transform 0.2s;
   height: 32px;
   margin: auto 16px auto 16px;
-  background: #D7CCC8;
-  border-radius:6px;
+  background: #d7ccc8;
+  border-radius: 6px;
   border-width: 2px;
   border-style: solid;
-  border-color: #BCAAA4;
+  border-color: #bcaaa4;
   padding: 4px;
 }
 
@@ -114,7 +125,7 @@ a:visited {
 .preparation > div > hr {
   width: 100%;
   border-style: solid;
-  border-color: #4E342E;
+  border-color: #4e342e;
   border-width: 1px;
   position: absolute;
 }
@@ -127,22 +138,22 @@ a:visited {
 
 .preparation > hr {
   width: 100%;
-  border-color: #4E342E;
+  border-color: #4e342e;
   border-style: dashed;
   border-bottom-width: 1px;
   margin: 0px;
 }
 
 .preparation > div > div {
-  color: #EFEBE9;
+  color: #efebe9;
   font-size: 1.2em;
   font-weight: bold;
   background: #795548;
-  width:32px;
-  height:32px;
-  border-radius:24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 24px;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
   margin: auto 16px auto 16px;
 }
