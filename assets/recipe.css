@@ -23,14 +23,6 @@ a:visited {
   text-decoration: none;
 }
 
-.ingredients {
-  background: #efebe9;
-  margin: 24px;
-  border-radius: 8px;
-  padding: 8px 16px 16px 16px;
-  width: 100%;
-}
-
 .recipe {
   margin-top: -64px;
   display: flex;
@@ -44,13 +36,40 @@ a:visited {
   }
 }
 
-.ingredients > div {
+.card {
+  background: #efebe9;
+  margin: 24px;
+  border-radius: 8px;
+  padding: 8px 16px 24px 16px;
+  width: 100%;
+}
+
+.card > div {
   display: flex;
   padding: 6px;
   align-items: center;
 }
-.ingredients > div:hover {
+
+.card > div:hover {
   background: #a1887f;
+}
+
+.card > div > hr {
+  width: 100%;
+  border-style: solid;
+  border-color: #4e342e;
+  border-width: 1px;
+  position: absolute;
+}
+
+.card > h2 {
+  margin: 16px auto 16px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card > hr {
+  margin: 4px;
 }
 
 .ingredients > div > img {
@@ -68,89 +87,14 @@ a:visited {
 .ingredients > div > img:active {
   transform: scale(10);
 }
-.ingredients > div > hr {
-  width: 100%;
-  border-style: solid;
-  border-color: #4e342e;
-  border-width: 1px;
-  position: absolute;
-}
-
-.ingredients > h2 {
-  margin: 16px auto auto auto;
-  display: flex;
-  justify-content: center;
-}
-
-.ingredients > hr {
-  width: 100%;
-  border-color: #4e342e;
-  border-style: dashed;
-  border-bottom-width: 1px;
-  margin: 0px;
-}
-
-.preparation {
-  background: #efebe9;
-  margin: 24px;
-  border-radius: 8px;
-  padding: 8px 16px 16px 16px;
-  width: 100%;
-}
-
-.preparation > div {
-  display: flex;
-  padding: 6px;
-  align-items: center;
-}
-.preparation > div:hover {
-  background: #a1887f;
-}
-
-.preparation > div > img {
-  transition: transform 0.2s;
-  height: 32px;
-  margin: auto 16px auto 16px;
-  background: #d7ccc8;
-  border-radius: 6px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #bcaaa4;
-  padding: 4px;
-}
-
-.preparation > div > img:active {
-  transform: scale(10);
-}
-.preparation > div > hr {
-  width: 100%;
-  border-style: solid;
-  border-color: #4e342e;
-  border-width: 1px;
-  position: absolute;
-}
-
-.preparation > h2 {
-  margin: 16px auto auto auto;
-  display: flex;
-  justify-content: center;
-}
-
-.preparation > hr {
-  width: 100%;
-  border-color: #4e342e;
-  border-style: dashed;
-  border-bottom-width: 1px;
-  margin: 0px;
-}
 
 .preparation > div > div {
   color: #efebe9;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
   background: #795548;
-  width: 32px;
-  height: 32px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 24px;
   display: flex;
   justify-content: center;
