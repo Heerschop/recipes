@@ -11,9 +11,9 @@ function onCardItemClick(mouseEvent) {
 
   if (element.tagName==='DIV'){
     if (element.classList.contains('card-item-selected')) {
-      mouseEvent.target.classList.remove('card-item-selected');
+      element.classList.remove('card-item-selected');
     } else {
-      mouseEvent.target.classList.add('card-item-selected');
+      element.classList.add('card-item-selected');
     }
 
     return;
@@ -21,9 +21,9 @@ function onCardItemClick(mouseEvent) {
 
   if (element.tagName==='IMG'){
     if (element.classList.contains('card-image-selected')) {
-      mouseEvent.target.classList.remove('card-image-selected');
+      element.classList.remove('card-image-selected');
     } else {
-      mouseEvent.target.classList.add('card-image-selected');
+      element.classList.add('card-image-selected');
     }
 
     return;
@@ -35,9 +35,9 @@ function onCardClick(mouseEvent){
 
   if (element.tagName==='DIV'){
     if (element.classList.contains('card-collapsed')) {
-      mouseEvent.target.classList.remove('card-collapsed');
+      element.classList.remove('card-collapsed');
     } else {
-      mouseEvent.target.classList.add('card-collapsed');
+      element.classList.add('card-collapsed');
     }
 
     return;

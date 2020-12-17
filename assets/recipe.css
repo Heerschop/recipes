@@ -44,13 +44,15 @@ a:visited {
 .card-image-selected {
   transform: scale(10);
   transform-origin: 10% 50%;
+  border-width: 0px;
 }
+
 .card-collapsed {
+  overflow: hidden;
   height: 72px;
 }
 
 .card {
-  overflow: hidden;
   background: #efebe9;
   margin: 0px 24px 48px 24px;
   border-radius: 8px;
@@ -95,15 +97,11 @@ a:visited {
   margin: auto 16px auto 8px;
   background: #d7ccc8;
   border-radius: 6px;
-  border-width: 2px;
+  border-width: 1.5px;
   border-style: solid;
   border-color: #bcaaa4;
-  padding: 4px;
+  padding: 2px;
 }
-
-/* .ingredients > div > img:active {
-  transform: scale(10);
-} */
 
 
 .preparation > div > div {
