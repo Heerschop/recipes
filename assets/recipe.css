@@ -8,6 +8,7 @@ body {
 
 * {
   box-sizing: border-box;
+  user-select: none; 
 }
 
 a {
@@ -35,8 +36,21 @@ a:visited {
   display: flex;
 }
 
+.card-item-selected {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.card-image-selected {
+  transform: scale(10);
+  transform-origin: 10% 50%;
+}
+.card-collapsed {
+  height: 72px;
+}
 
 .card {
+  overflow: hidden;
   background: #efebe9;
   margin: 0px 24px 48px 24px;
   border-radius: 8px;
@@ -65,7 +79,8 @@ a:visited {
 }
 
 .card > h2 {
-  margin: 16px auto 16px auto;
+  margin: 0px auto 0px auto;
+  padding: 16px 0px 16px 0px;
   display: flex;
   justify-content: center;
 }
@@ -86,9 +101,10 @@ a:visited {
   padding: 4px;
 }
 
-.ingredients > div > img:active {
+/* .ingredients > div > img:active {
   transform: scale(10);
-}
+} */
+
 
 .preparation > div > div {
   color: #efebe9;

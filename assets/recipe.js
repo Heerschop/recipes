@@ -6,6 +6,44 @@ function* getElementsByAttribute(elementName, attributeName) {
   }
 }
 
+function onCardItemClick(mouseEvent) {
+  const element = mouseEvent.target;
+
+  if (element.tagName==='DIV'){
+    if (element.classList.contains('card-item-selected')) {
+      mouseEvent.target.classList.remove('card-item-selected');
+    } else {
+      mouseEvent.target.classList.add('card-item-selected');
+    }
+
+    return;
+  }
+
+  if (element.tagName==='IMG'){
+    if (element.classList.contains('card-image-selected')) {
+      mouseEvent.target.classList.remove('card-image-selected');
+    } else {
+      mouseEvent.target.classList.add('card-image-selected');
+    }
+
+    return;
+  }
+}
+
+function onCardClick(mouseEvent){
+  const element = mouseEvent.target;
+
+  if (element.tagName==='DIV'){
+    if (element.classList.contains('card-collapsed')) {
+      mouseEvent.target.classList.remove('card-collapsed');
+    } else {
+      mouseEvent.target.classList.add('card-collapsed');
+    }
+
+    return;
+  }
+}
+
 function processRecipes() {
   for (const element of getElementsByAttribute('div', 'recipe')) {
     const link = document.createElement('a');
@@ -27,6 +65,9 @@ function processIngredients() {
     const text = document.createTextNode('Ingredients');
 
     header.appendChild(text);
+    header.addEventListener("click", (source) => onCardClick({
+      target:ingredients,
+    }));
 
     ingredients.classList.add('ingredients', 'card');
     ingredients.insertBefore(header, ingredients.firstChild);
@@ -52,6 +93,8 @@ function processIngredients() {
         }
 
         element.insertBefore(imageElement, element.firstChild);
+        element.addEventListener("click", (source) =>           onCardItemClick(source)        );
+          
       }
     }
 
@@ -65,6 +108,9 @@ function processPreparation() {
     const text = document.createTextNode('Preparation');
 
     header.appendChild(text);
+    header.addEventListener("click", (source) => onCardClick({
+      target:preparation,
+    }));
 
     preparation.classList.add('preparation', 'card');
     preparation.insertBefore(header, preparation.firstChild);
@@ -86,6 +132,11 @@ function processPreparation() {
       divElement.appendChild(text);
 
       element.insertBefore(divElement, element.firstChild);
+      element.addEventListener("click", (source) => {
+        onCardItemClick({
+          target:element,
+        });
+      });
 
       number++;
     }
