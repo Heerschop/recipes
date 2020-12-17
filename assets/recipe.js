@@ -1,3 +1,5 @@
+let selectedText = null;
+
 function* getElementsByAttribute(elementName, attributeName) {
   for (const element of document.getElementsByTagName(elementName)) {
     if (element.hasAttribute && element.hasAttribute(attributeName)) {
@@ -6,10 +8,21 @@ function* getElementsByAttribute(elementName, attributeName) {
   }
 }
 
+function onCopyClick(){
+  const element = document.getElementById('copy-textarea');
+
+  element.value = selectedText;
+  element.select();
+
+  document.execCommand("copy");
+}
+
 function onCardItemClick(mouseEvent) {
   const element = mouseEvent.target;
 
   if (element.tagName==='DIV'){
+    selectedText = element.textContent;
+
     if (element.classList.contains('card-item-selected')) {
       element.classList.remove('card-item-selected');
     } else {
@@ -94,7 +107,6 @@ function processIngredients() {
 
         element.insertBefore(imageElement, element.firstChild);
         element.addEventListener("click", (source) =>           onCardItemClick(source)        );
-          
       }
     }
 

@@ -8,7 +8,22 @@ body {
 
 * {
   box-sizing: border-box;
-  user-select: none; 
+  user-select: none;
+}
+
+#copy-textarea {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-style: none;
+  background: transparent;
+  opacity: 0;
+}
+
+#copy-textarea:focus {
+  outline: none;
 }
 
 a {
@@ -103,6 +118,22 @@ a:visited {
   padding: 2px;
 }
 
+.copy-to-clipboard {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  right: 16px;
+  bottom: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  background: #bcaaa4;
+  border-radius: 24px;
+}
+
+.copy-to-clipboard:focus {
+  outline: none;
+}
 
 .preparation > div > div {
   color: #efebe9;
@@ -118,20 +149,6 @@ a:visited {
   margin: auto 16px auto 8px;
 }
 
-@media only screen and (max-width: 720px) {
-  .recipe {
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    padding-left: 0px;
-    padding-right: 0px;
-  
-  }
-  .card {
-    margin: 0px 12px 12px 12px;
-    padding: 8px 8px 8px 8px;
-  }  
-}
 @media only screen and (max-width: 1280px) {
   .recipe {
     padding-left: 12px;
@@ -140,5 +157,19 @@ a:visited {
   .card {
     margin: 0px 12px 24px 12px;
     padding: 8px 8px 8px 8px;
-  }  
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .recipe {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .card {
+    margin: 0px 12px 12px 12px;
+    padding: 8px 8px 8px 8px;
+  }
 }
