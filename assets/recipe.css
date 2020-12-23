@@ -51,9 +51,15 @@ a:visited {
   display: flex;
 }
 
-.card-item-selected {
+.card-item-checked {
   text-decoration: line-through;
   opacity: 0.4;
+}
+
+.card-item-selected {
+  background: #a1887f;
+  border-radius: 8px;
+
 }
 
 .card-image-selected {
@@ -84,7 +90,10 @@ a:visited {
 }
 
 .card > div:hover {
-  background: #a1887f;
+  border-color: #d7ccc8;
+  border-style: solid;
+  border-radius: 8px;
+  padding: 3px;
 }
 
 .card > div > hr {
@@ -131,7 +140,24 @@ a:visited {
   border-radius: 24px;
 }
 
+.open-translate {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  right: 64px;
+  bottom: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  background: #bcaaa4;
+  border-radius: 24px;
+}
+
 .copy-to-clipboard:focus {
+  outline: none;
+}
+
+.open-translate:focus {
   outline: none;
 }
 

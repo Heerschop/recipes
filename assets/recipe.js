@@ -1,4 +1,6 @@
 let selectedText = null;
+let selectedElement = null;
+let selectedImage = null;
 
 function* getElementsByAttribute(elementName, attributeName) {
   for (const element of document.getElementsByTagName(elementName)) {
@@ -8,7 +10,7 @@ function* getElementsByAttribute(elementName, attributeName) {
   }
 }
 
-function onCopyClick(){
+function onCopyClick() {
   const element = document.getElementById('copy-textarea');
 
   element.value = selectedText;
@@ -20,9 +22,7 @@ function onCopyClick(){
 function onCardItemClick(mouseEvent) {
   const element = mouseEvent.target;
 
-  if (element.tagName==='DIV'){
-    selectedText = element.textContent;
-
+  if (element.tagName === 'DIV') {
     if (element.classList.contains('card-item-selected')) {
       element.classList.remove('card-item-selected');
     } else {
@@ -32,7 +32,7 @@ function onCardItemClick(mouseEvent) {
     return;
   }
 
-  if (element.tagName==='IMG'){
+  if (element.tagName === 'IMG') {
     if (element.classList.contains('card-image-selected')) {
       element.classList.remove('card-image-selected');
     } else {
@@ -43,10 +43,41 @@ function onCardItemClick(mouseEvent) {
   }
 }
 
-function onCardClick(mouseEvent){
+function onHtmlClick(mouseEvent) {
   const element = mouseEvent.target;
 
-  if (element.tagName==='DIV'){
+  if (selectedImage && selectedImage !== element) selectedImage.classList.remove('card-image-selected');
+  if (selectedElement && selectedElement !== element) selectedElement.classList.remove('card-item-selected');
+
+  selectedElement = element;
+  selectedImage = element;
+
+  selectedText = element.textContent;
+
+  if (!selectedText) {
+
+  }
+}
+
+function onCardItemDoubleClick(mouseEvent) {
+  const element = mouseEvent.target;
+
+  if (element.tagName === 'DIV') {
+    if (element.classList.contains('card-item-checked')) {
+      element.classList.remove('card-item-checked');
+    } else {
+      element.classList.add('card-item-checked');
+    }
+
+    return;
+  }
+}
+
+
+function onCardClick(mouseEvent) {
+  const element = mouseEvent.target;
+
+  if (element.tagName === 'DIV') {
     if (element.classList.contains('card-collapsed')) {
       element.classList.remove('card-collapsed');
     } else {
@@ -54,6 +85,35 @@ function onCardClick(mouseEvent){
     }
 
     return;
+  }
+}
+
+function cleanupText(text) {
+  const columns = text.split('\n');
+
+  return columns.map(item=>item.trim()).join('\n')
+}
+
+function onTranslateClick() {
+  console.log('onTranslateClick:', selectedText);
+
+  if (selectedText) {
+    // let value = selectedText;
+    // let previous = value;
+
+    // do {
+    //   previous = value;
+    //   value = value.replace(/  /g, ' ');
+    // } while (previous !== value);
+
+    const url = new URL('https://translate.google.com');
+
+    url.searchParams.append('sl', 'nl');
+    url.searchParams.append('tl', 'en');
+    url.searchParams.append('op', 'translate');
+    url.searchParams.append('text', cleanupText(selectedText));
+
+    window.open(url.toString());
   }
 }
 
@@ -79,7 +139,7 @@ function processIngredients() {
 
     header.appendChild(text);
     header.addEventListener("click", (source) => onCardClick({
-      target:ingredients,
+      target: ingredients,
     }));
 
     ingredients.classList.add('ingredients', 'card');
@@ -106,7 +166,8 @@ function processIngredients() {
         }
 
         element.insertBefore(imageElement, element.firstChild);
-        element.addEventListener("click", (source) =>           onCardItemClick(source)        );
+        element.addEventListener('click', (source) => onCardItemClick(source));
+        element.addEventListener('dblclick', (source) => onCardItemDoubleClick(source));
       }
     }
 
@@ -121,7 +182,7 @@ function processPreparation() {
 
     header.appendChild(text);
     header.addEventListener("click", (source) => onCardClick({
-      target:preparation,
+      target: preparation,
     }));
 
     preparation.classList.add('preparation', 'card');
@@ -146,7 +207,7 @@ function processPreparation() {
       element.insertBefore(divElement, element.firstChild);
       element.addEventListener("click", (source) => {
         onCardItemClick({
-          target:element,
+          target: element,
         });
       });
 

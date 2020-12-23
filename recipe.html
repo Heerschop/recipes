@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="onHtmlClick(event)">
 
 <head>
   <meta charset="UTF-8">
@@ -16,6 +16,9 @@
   <button class="copy-to-clipboard" onclick="onCopyClick()">
     <img src="images/copy-clipboard.png" width="26px" height= "26px">
   </button>
+  <button class="open-translate" onclick="onTranslateClick()">
+    <img src="images/translate.png" width="26px" height= "26px">
+  </button>
 </body>
 
 </html>
@@ -29,7 +32,7 @@
 
     if (element) element.setAttribute('include-html', 'recipes/' + recipe + '.html');
   }
-  
+
   {
     const element = document.getElementById('title');
 
