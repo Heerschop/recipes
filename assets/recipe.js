@@ -95,8 +95,6 @@ function cleanupText(text) {
 }
 
 function onTranslateClick() {
-  console.log('onTranslateClick:', selectedText);
-
   if (selectedText) {
     // let value = selectedText;
     // let previous = value;

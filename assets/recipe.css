@@ -65,7 +65,8 @@ a:visited {
 .card-image-selected {
   transform: scale(10);
   transform-origin: 10% 50%;
-  border-width: 0px;
+  border-width: 1px  !important;;
+  padding: 0.75px !important;
 }
 
 .card-collapsed {
@@ -124,7 +125,7 @@ a:visited {
   border-width: 1.5px;
   border-style: solid;
   border-color: #bcaaa4;
-  padding: 2px;
+  padding: 2.5px;
 }
 
 .copy-to-clipboard {
