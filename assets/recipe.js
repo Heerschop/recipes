@@ -160,7 +160,7 @@ function processIngredients() {
         imageElement.src = image;
 
         if (!image.startsWith('http')) {
-          imageElement.src = 'images/' + image + '.png';
+          imageElement.src = 'images/ingredients/' + image + '.png';
         }
 
         element.insertBefore(imageElement, element.firstChild);
