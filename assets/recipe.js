@@ -91,7 +91,7 @@ function onCardClick(mouseEvent) {
 function cleanupText(text) {
   const columns = text.split('\n');
 
-  return columns.map(item=>item.trim()).join('\n')
+  return columns.map(item=>item.trim()).join('\n').replace(/^(\d*)(.*)/g,'$1 $2')
 }
 
 function onTranslateClick() {

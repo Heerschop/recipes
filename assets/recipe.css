@@ -119,6 +119,7 @@ a:visited {
 .ingredients > div > img {
   transition: transform 0.2s;
   height: 44px;
+  min-width: 44px;
   margin: auto 16px auto 8px;
   background: #d7ccc8;
   border-radius: 6px;
